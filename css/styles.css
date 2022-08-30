@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-color: #091a2b;
+}
+
+
+.container{
+    width: 1296px;
+    margin: auto;
+}
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-header >h2{
+    margin-left: 10px;
+    margin-right: 40px;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+}
+.top-header >nav{
+    margin-right: 100px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+}
+
+.top-menu{
+    list-style: none;
+    font-size: 16px;
+    display: flex;
+    padding: 29px;
+    padding-left: 0px;
+    color: white;
+}
+.top-menu >li > a{
+    color:beige;
+    margin-right: 25px;
+}
+
+.menu-section{
+    background-color:purple;
+}
+
+
+
+/* MENU */
+
+.menu{ ++
+    list-style: none;
+    font-size: 16px;
+    display: flex;
+    padding: 19px;
+    padding-left: 0px;
+    
+}
+.menu >li > a{
+    color:aqua;
+    margin-right: 25px;
+}
+.menu >li > a:hover {
+    color: white;
+}
+.menu-section{
+    position: sticky;
+}
+
+.catalog-section{
+    height: 1000px;
+}
+
+.location-icon{
+    width: 32px;
+    height: 32px;
+    background-color: orange;
+    margin-right: 8px;
+}
+.exchange-icon{
+    width: 32px;
+    height: 32px;
+    background-color: orange;
+    margin-right: 8px;
+}
+.account-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+.account-switcher > h5 {
+    margin-left: 5px;
+    color: orange;
+}
+.account-switcher > img{
+    width: 32px;
+    height: 32px;
+    background-color: orange;
+}
+.language{
+    color: white;
+    font-size: 13px;
+    margin-left: 16px;
+}
+
+.become-solo-button{
+    width: 120px;
+    height: 32px;
+    margin-left: 12px;
+    background-color: orange;
+    border-radius: 3px;
+    color: white;
+}
