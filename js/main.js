@@ -1,8 +1,18 @@
 import { app } from "./common/common.js";
 import { Filter } from "./modules/developer.js";
+import { Checkbox } from "./modules/developer.js";
+
+let cities = new Checkbox(app.cities);
+app.filter[0].content = cities.rander();
+
+let developingStatus = new Checkbox(app.developingStatus);
+app.filter[2].content = developingStatus.rander();
+
 
 let filters = new Filter(app.filter);
 filters.rander();
+
+
 
 
 let filtersHeadersBtn = document.querySelectorAll('.filter-hearder');

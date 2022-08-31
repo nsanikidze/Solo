@@ -2,7 +2,7 @@ export const app = {
     filter: [
         {
             headertext: "აირჩიე ქალაქი",
-            content: "test test test test testtest test test test test test test test test test test test testtest",
+            content: "",
         },
         {
             headertext: "კვადრატულის ფასი",
@@ -12,6 +12,25 @@ export const app = {
             headertext: "მშენებლობის სტატუსი",
             content: "test",
         },
+    ],
+    cities: [
+        { name: "ყველა",},
+        { name: "თბილისი",},
+        { name: "ქუთაისი",},
+        { name: "ბათუმი",},
+        { name: "ბაკურიანი",},
+        { name: "გუდაური",},
+        { name: "აბასთუმანი",},
+        { name: "მანგლისი",},
+    ],
+    developingStatus: [
+        { name: "ყველა",},
+        { name: "მწვანე კარკასი",},
+        { name: "თეთრი კარკასი",},
+        { name: "შავი კარკასი",},
+        { name: "გარემონტებული",},
+        { name: "ლურჯი კარკასი",},
+        { name: "ჭკვიანი კარკასი",},
     ]
 }
 

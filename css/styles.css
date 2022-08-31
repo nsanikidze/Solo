@@ -5,6 +5,21 @@
 }
 
 
+@font-face {
+    font-family: BOG-Headline;
+    src: url(../fonts/BOG-Headline-Bold.woff2);
+}
+
+@font-face {
+    font-family: BOG;
+    src: url(../fonts/BOG-Regular.woff2);
+}
+
+@font-face {
+    font-family: MarkGEOCAPS;
+    src: url(../fonts/MarkGEOCAPS-Medium.woff2);
+}
+
 body{
     background-color: #091a2b;
 }
@@ -20,69 +35,45 @@ body{
     width: 1296px;
     margin: auto;
 }
+.button{
+    width: 119px;
+    height: 32px;
+    background-color: orange;
+    border-radius: 2px;
+    font-size: 12px;
+    color: white;
+    border: none;
+    font-family: MarkGEOCAPS;
+    font-weight: 500;
+}
+
+/* TOP HEADER */
 .top-header{
     display: flex;
     align-items: center;
+    font-family: BOG;
+    color:rgba(255, 255, 255, 0.78);
 }
-.top-header >h2{
-    margin-left: 10px;
-    margin-right: 40px;
-    color: white;
-    font-weight: 100;
-    font-size: 20px;
-}
-.top-header >nav{
-    margin-right: 90px;
-}
-
 .logo{
-    width: 40px;
-    height: 40px;
-    background-color: blue;
+    width: 121.09px;
+    height: 37.56px; 
+    margin-left: 6px;
+    margin-right: 22px;
 }
-
+.active-nav-item{
+    color: orange;
+}
 .top-menu{
-    list-style: none;
-    font-size: 16px;
     display: flex;
-    padding: 29px;
-    padding-left: 0px;
-    color: white;
-}
-.top-menu >li > a{
-    color:beige;
-    margin-right: 25px;
-}
-
-.menu-section{
-    background-color:purple;
-}
-
-
-
-/* MENU */
-
-.menu{ 
     list-style: none;
-    font-size: 16px;
-    display: flex;
-    padding: 19px;
+    font-size: 14px;
+    padding: 30px;
     padding-left: 0px;
-    
+    padding-right: 163px;  
 }
-.menu >li > a{
-    color:aqua;
-    margin-right: 25px;
-}
-.menu >li > a:hover {
-    color: white;
-}
-.menu-section{
-    position: sticky;
-}
-
-.catalog-section{
-    height: 1000px;
+.top-menu >li > a{  
+    margin-left: 24px;
+    font-family: BOG;
 }
 .icon{
     width: 32px;
@@ -93,71 +84,125 @@ body{
     margin-right: 8px;
     border-radius: 100%;
 }
-
-
 .icon:hover{
-   background-color: red;
+   background-color: #192635;
 }
-
-
 .account-switcher {
     display: flex;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 80px;
+    margin-left: 42px;
+    margin-right: 42px;
+    padding-right: 12px;
     
-
 }
+.account-switcher:hover{
+    background-color: #192635;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 15px; 
+ }
 .account-switcher > h5 {
     color: orange;
+    font-size: 12px;
+    font-family: BOG;
+    font-weight: 500;
 }
+
 .account-switcher-icon{
     width: 32px;
     height: 32px;
-    background-color: orange;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
+    background-color: orange;
+    margin-right: 6px;
     border-radius: 100%;
 }
 .language{
-    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 6px;
     font-size: 13px;
-    margin-left: 16px;
+    font-weight: 500;
+    line-height: 1.4em;
 }
-
+.language:hover{
+    background-color: #192635;
+    border-radius: 10px;
+}
 .become-solo-button{
     margin-left: 12px;
+    width: 125px;
+
 }
 
-.button{
-    width: 120px;
-    height: 32px;
-    background-color: orange;
-    border-radius: 3px;
+
+
+
+
+/* MENU */
+.menu-section{
+    background-color:#2b3a48;
+}
+
+.menu{ 
+    list-style: none;
+    display: flex;
+    padding: 19px;
+    padding-left: 0px;
+    
+}
+.menu >li > a{
+    color:rgba(255, 255, 255, 0.92);
+    margin-right: 31px;
+    font-family: BOG;
+    font-size: 14px;
+    font-stretch: normal;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    line-height: 1.4em;
+}
+.menu >li > a:hover {
     color: white;
-    border: none;
+}
+.menu-section{
+    position: sticky;
 }
 
+
+/* SLIDER */
 .slider-section{
     padding: 64px;
 }
 
 .slider-section > .container > h2{
     color: white;
-    font-size: 40px;
     margin-bottom: 32px;
-    
+    font-family: BOG-Headline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.4em;
 }
 
 .slider-backgraund{
   width: 100%;
   height: 300px;
   border-radius: 12px;
+  position: relative;
   background-image: url(https://ramad.bog.ge/s3/solo/images/a3dd4512-dc72-45cd-b93c-b96a8b050eb2.png);
-
+  background-size: 100%;
+  background-position: center center;
 }
+.slider-backgraund-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(43, 25, 25, 0.3), #2b1919);
+}
+
 .slider-content{
     padding-left: 40px;
     padding-right: 40px;
@@ -166,16 +211,24 @@ body{
 
 .slider-content >h4 {
     color: white;
-    margin-bottom: 16px;
+    font-weight: bold;
     font-size: 24px;
+    font-family: BOG;
+    line-height: 1.4em;
+    margin-bottom: 34px;
+    
 }
+
+/* CATALOG */
 .catalog-header{
     margin-bottom: 32px;
 }
 
 .catalog-header > h3{
     color: white;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: BOG;
 }
 
 .calatog-selects{
@@ -184,10 +237,10 @@ body{
 }
 .filter{
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid #d7dadd;
     border-radius: 15px;
-    background-color: #091a2b;
     margin-bottom: 24px;
+    background-color: #192635;
 
 }
 
@@ -215,3 +268,73 @@ body{
     height: 14px;
 }
  
+.filter-body{
+    padding: 24px;
+    padding-top: 0px;
+    color: white;
+}
+.filter-body > input{
+    margin-bottom: 16px;
+}
+.checkbox-container{
+    margin-bottom: 16px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+  }
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+.checkmark {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #192635;
+    border: 2px solid gray;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+}
+
+.checkmark:hover{
+    border-color: white;
+  }
+
+  .checkbox-container  input:checked ~ .checkmark {
+    background-color: orange;
+    border-color: orange;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkbox-container .checkmark:after {
+    left: 2px;
+    top: -2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
