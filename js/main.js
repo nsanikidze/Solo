@@ -1,9 +1,13 @@
 import { app } from "./common/common.js";
 import { Filter } from "./modules/developer.js";
+import { Radiobutton } from "./modules/developer.js";
 import { Checkbox } from "./modules/developer.js";
 
 let cities = new Checkbox(app.cities);
 app.filter[0].content = cities.rander();
+
+let priceList = new Radiobutton(app.priceList);
+app.filter[1].content = priceList.rander();
 
 let developingStatus = new Checkbox(app.developingStatus);
 app.filter[2].content = developingStatus.rander();

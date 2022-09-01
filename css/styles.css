@@ -59,6 +59,7 @@ body{
     height: 37.56px; 
     margin-left: 6px;
     margin-right: 22px;
+    background-size: 100%;
 }
 .active-nav-item{
     color: orange;
@@ -236,7 +237,7 @@ body{
     margin-right: 32px;
 }
 .filter{
-    width: 100%;
+    width: 260px;
     border: 1px solid #d7dadd;
     border-radius: 15px;
     margin-bottom: 24px;
@@ -338,3 +339,210 @@ body{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  /* The container */
+.radio-button-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: grey;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-button-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .radio-button-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #192635;
+    border: 2px solid gray;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-button-container:hover input ~ .radio-button-checkmark {
+    border-color: white;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-button-container input:checked ~ .radio-button-checkmark {
+    border-color: orange;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radio-button-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-button-container input:checked ~ .radio-button-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radio-button-container .radio-button-checkmark:after {
+       top: 2px;
+      left: 2px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: orange;
+  }
+
+
+  .price-filter-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .price-input{
+     width: 67px;
+     height: 32px;
+     color:rgba(43, 25, 25, 0.3);
+     font-size: 12px;
+  }
+
+  .price-input-button{
+    width: 32px;
+    height: 32px;
+    background-color: orange;
+    border-radius: 100px;
+    border: none;
+    color:rgba(255, 255, 255, 0.78);
+    margin-left: 5px;
+  }
+
+
+  .calatog-body{
+    display: flex;
+    
+  }
+
+  .catalog-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+    height: 100%;
+  }
+
+  .catalog-item-container{
+    width: 315px;
+    height: 372px;
+    padding: 32px;
+    border: 0.01px solid grey;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .catalog-item-img{
+    width: 100%;
+    height: 152px;
+    background-color: purple;
+  }
+
+  .catalog-item-container > h3{
+    font-family: BOG;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    color: white;
+  }
+
+  .catalog-item-container > h4{
+    font-family: BOG;
+    font-size: 16px;
+    color: white;
+  }
+
+  .catalog-item-container > h5{
+    font-family: BOG;
+    font-size: 14px;
+    color:grey;
+  }
+
+
+
+  .catalog-item-details{
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    color:orange;
+    font-size: 14px;
+
+  }
+
+  /* FOOTER */
+
+  .footer > .container{
+    border-top: 1px solid grey;
+    margin-top: 48px;
+    padding-top: 24px;
+    padding-bottom: 50px;
+  }
+
+  .footer-items{
+    
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .footer-logo{
+    width: 92px;
+    height: 28.54px;
+    background-size: 100%;
+  }
+  .footer-items > h4{
+    font-size: 14px;
+    font-weight: 500px;
+    font-family: MarkGeo;
+    color: white;
+    padding-right: 235px;
+    padding-left: 235px;
+    
+  }
+
+
+  .footer-language{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    width: 142px;
+     height: 32px;
+     background-color: #192635;
+  }
+  
+  .footer-geo-flag{
+    width: 16px;
+    height: 12px;
+    background-size: 100%;
+    
+  }
+
+.footer-language > h5{
+    color: white;
+    padding-right: 16px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500px;
+    font-family: MarkGEO;
+}

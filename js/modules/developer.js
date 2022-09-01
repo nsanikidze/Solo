@@ -19,7 +19,7 @@ export class Filter {
                             </div>
 
                         </div>
-                        <div class="filter-body active">
+                        <div class="filter-body active"> 
                            ${obj.content}
                         </div>
                         
@@ -36,15 +36,13 @@ export class Filter {
 
 export class Checkbox {
     constructor(checkboxObjects) {
-        console.log(this.checkboxObjects);
         this.checkboxObjects = checkboxObjects;
     }
 
     _getCheckboxList() {
-        console.log(this.checkboxObjects);
         let list = this.checkboxObjects.map((obj) => {
-            return ` <label class="checkbox-container">${obj.name}
-                        <input type="checkbox"  value="${obj.name}">
+            return ` <label class="checkbox-container">${obj.value}
+                        <input type="checkbox"  value="${obj.value}">
                         <span class="checkmark"></span>
                     </label>`;
         });
@@ -52,5 +50,33 @@ export class Checkbox {
     }
     rander() {
         return this._getCheckboxList();
+    }
+}
+
+export class Radiobutton {
+    constructor(radiobuttonObjects) {
+        this.radiobuttonObjects = radiobuttonObjects;
+    }
+
+    _getInputs(){
+        return `<div class="price-filter-inputs">
+                        <input type="text" value="დან"  class="price-input" id="input-price-from">
+                        <div> - </div>
+                        <input type="text" value="მდე" class="price-input" id="input-price-to">
+                        <input type="submit" value=">" class="price-input-button" >
+                </div>`;
+    }
+
+    _getRadiobuttonList() {
+        let list = this.radiobuttonObjects.map((obj) => {
+            return ` <label class="radio-button-container">${obj.from} - ${obj.to}
+            <input type="radio" checked="checked" name="radio">
+            <span class="radio-button-checkmark"></span>
+          </label>`;
+        });
+        return list.join(" ");
+    }
+    rander() {
+        return this._getInputs() + this._getRadiobuttonList();
     }
 }
