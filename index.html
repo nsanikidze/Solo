@@ -138,14 +138,26 @@
         <div class="container">
             <div class="catalog-header">
                 <h3>დეველოპერები (27)</h3>
+                <div class="search-input">
+                    <input type="text" name="search" id="search-input" placeholder="ძიება">
+                    <svg style="pointer-events: none; display: block; " width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="icons-48-system-search-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect id="shape" x="0" y="5.68434189e-14" width="48" height="48"></rect>
+                        <path d="M45.5614286,42.0434694 L35.4293878,31.8159184 C40.9300744,24.306792 40.1715235,13.9163304 33.6385714,7.28571425 C30.1478196,3.74747165 25.3847508,1.75566641 20.4143877,1.75566641 C15.4440247,1.75566641 10.6809559,3.74747165 7.19020405,7.28571425 C-0.110349399,14.6866698 -0.110349399,26.5798608 7.19020405,33.9808163 C13.8724838,40.7511312 24.5905274,41.3765509 32.014898,35.4293878 L42.0832653,45.5614286 C42.5443224,46.0258332 43.1719227,46.2866169 43.8263266,46.2858162 C44.479409,46.2917427 45.1064563,46.0299937 45.5614286,45.5614286 C46.5265243,44.5873445 46.5265243,43.0175536 45.5614286,42.0434694 Z M10.6683673,30.4310204 C5.28751449,24.9763415 5.28751449,16.2105973 10.6683673,10.7559183 C13.2408674,8.14804451 16.7512248,6.67994572 20.4143877,6.67994572 C24.0775507,6.67994572 27.5879081,8.14804451 30.1604082,10.7559183 L30.1604082,10.7559183 C35.541261,16.2105973 35.541261,24.9763415 30.1604082,30.4310204 C27.5847174,33.032935 24.0755545,34.4969 20.4143877,34.4969 C16.753221,34.4969 13.2440581,33.032935 10.6683673,30.4310204 Z" id="system-:-search-" fill="currentColor" fill-rule="nonzero"></path>
+                         </g>
+                    </svg>
+                </div>
+                <select id="order" name="sort">
+                    <option value="">ყველა</option>
+                    <option value="costAsc">ზრდადობით</option>
+                    <option value="costDesc">კლებადობით</option>
+                </select>
             </div>
             <div class="calatog-body">
                 <div class="calatog-selects" id="selects">
                 </div>
-                <div class="catalog-items" id="catalog-items-id" >
-                   
+                <div class="catalog-items" id="catalog-id" >
                     
-                 
                 </div>
             </div>
         </div>
@@ -169,6 +181,9 @@
             </div>
         </div>
     </footer>
+
+    
+
     <script type="module" src="./js/main.js">
     </script>
 
