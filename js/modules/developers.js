@@ -72,7 +72,9 @@ export class Filter {
 
         //cityParam = getCityParams();
         //devStatusParam = getDevStatusParams();
+        console.log(1);
         getParamList('city', 'cityParam');
+        console.log(2);
         getParamList('devStatus', 'typeParam');
         priceList.fillPriceInputs();
         priceList.clickSubmit();
@@ -109,7 +111,7 @@ export class Radiobutton {
     _getInputs() {
         return `<div class="price-filter-inputs">
                         <input type="text" value="დან"  class="price-input" id="input-price-from">
-                        <div class="price-input"> - </div>
+                        <div class="price-input-line"> - </div>
                         <input type="text" value="მდე" class="price-input" id="input-price-to">
                         <input type="submit" value=">" class="price-input-button" >
                 </div>`;
@@ -193,14 +195,15 @@ export class Developer {
         let list = this.devObjects.map((obj) => {
             return ` <div class="catalog-item-container">
                         <div class="catalog-item-img" style="background: url('.${obj.image.url}'); background-size: 100%"></div>
+                        <div class="catalog-item-text">
                         <h3>${obj.projectName}</h3>
                         <h4>${obj.priceLabel}</h4>
                         <h5>${obj.address}</h5>
+                        </div>
                         <div class="catalog-item-details"> გაიგეთ მეტი</div>
                     </div>`;
         });
         if (list.join(" ") === "") {
-            console.log("nana");
             return `<div class="emplty-catalog-container">
                         <div class="no-items">
                             <img src="undefined">
@@ -275,7 +278,7 @@ let getParamList = (checkboxName, paramName) => {
     for (let checkboxItem of checkboxItems) {
         checkboxItem.addEventListener('change', () => {
             let paramStr = `&${paramName}=`;
-            let checkedItems = Array.from(checkboxItem).filter(i => i.checked).map(i => i.value);
+            let checkedItems = Array.from(checkboxItems).filter(i => i.checked).map(i => i.value);
             if (checkedItems.length == 0) {
                 paramStr = "";
             } else {
